@@ -1,0 +1,54 @@
+ 
+
+   body {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 20em;
+        height: 2.5em;
+        position: relative;
+      }
+
+      .input {
+        position: absolute;
+        height: 100%;
+        width: 100%; 
+        border: 1px solid ;
+        border-color:  black;
+        border-radius: 10px;
+        outline: none;
+        color: black; 
+      }
+
+      label {
+        position: absolute;
+        background: white;
+        color: black;
+        left: 1em;
+        top: 0.75em; 
+        transition: top 350ms ease-in;
+      }
+
+     
+
+      .input:focus {
+        border: 1px solid ;
+        border-color:  red;
+        color: red;
+      }
+      input:focus ~ label{
+        color:red;
+      }
+
+      input:focus ~ label,
+      .input:not(:placeholder-shown).input:not(:focus) ~ label {
+        top: -0.5em;
+        
+        
+      }
